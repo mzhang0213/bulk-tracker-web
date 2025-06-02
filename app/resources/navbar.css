@@ -1,0 +1,45 @@
+@import "../../node_modules/tailwindcss";
+
+
+#navBar {
+    @apply flex items-center justify-between flex-wrap w-screen fixed px-4;
+    transition: background-color,opacity 200ms ease-in-out;
+    opacity:0;
+    background-color:var(--theme-black);
+    height:45px; /* 0 >> 45 px*/
+    z-index:1;
+}
+
+.navbar-item:hover{
+    background-color:#383838;
+    cursor:pointer;
+}
+
+.navbar-content{
+    display:none;
+    position:absolute;
+    justify-content:center;
+    background-color:rgb(36, 36, 36);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+}
+
+.navbar-content *{
+    @apply w-full py-2 px-2;
+    text-decoration:none;
+    font-size:10px;
+    white-space: nowrap;
+}
+
+.navbar-group:hover .navbar-content {
+    display:block;
+}
+
+.navbar-group button:hover {
+    background-color:#383838;
+    cursor:pointer;
+}
