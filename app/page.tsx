@@ -28,7 +28,8 @@ export default function Home() {
         });
         socket.on("scan_result", (data:{result:string,files:{name:string,scan_type:string}[]}) => {
 
-            gebi("main-body").innerHTML=data.result;
+            const body = gebi("main-body") as HTMLInputElement;
+            body.value=data.result;
 
             gebi("main-links").innerHTML="";
 
