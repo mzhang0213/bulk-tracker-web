@@ -16,6 +16,8 @@ export default defineConfig([{
   extends: compat.extends("next/core-web-vitals", "next/typescript"),
   rules: {
     'react/no-unescaped-entities': 'off',
-    '@next/next/no-img-element': 'off'
+    '@next/next/no-img-element': 'off',
+    'no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': ['error'],
   }
 }]);

@@ -219,6 +219,8 @@ function RenderNavbar({ items }: { items: NavDataType[] }) {
 
 export default function Navbar({customItems}: { customItems: NavDataType[] | null }) {
     useEffect(() => {
+        gebi("navBar").style.opacity="1";
+        /*
         const navBarFade = function(){
             if (window.scrollY>window.innerHeight*0.9){
                 //show navbar
@@ -229,6 +231,7 @@ export default function Navbar({customItems}: { customItems: NavDataType[] | nul
         }
         navBarFade();
         document.addEventListener("scroll",navBarFade);
+         */
     }, []);
     return (
         <nav id={"navBar"}>

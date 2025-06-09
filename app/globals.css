@@ -1,33 +1,8 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-/*
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-*/
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Merriweather, sans-serif;
 }
-
-
 .object {
   @apply rounded-lg;
   box-shadow: 8px 8px 0px 0px var(--theme-blue);
@@ -67,6 +42,7 @@ body {
   left:0;
   top:0;
   z-index:-5;
+  background-image:url("../public/resources/IMG_1376.jpg");
   background-position-y:80%;
   opacity:0.5;
 }
